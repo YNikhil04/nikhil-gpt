@@ -1,0 +1,143 @@
+/* Basic Reset */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a; /* Deep dark blue */
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.container {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  border: 1px solid #334155;
+}
+
+/* Wrapper to stack App and Response vertically */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between input and response */
+  padding: 20px;
+}
+
+/* Response Container Styling */
+.response {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-response {
+  background: #1e293b; /* Matches your App container */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 1200px; /* Aligns with your App container width */
+  text-align: left;
+  border: 1px solid #334155;
+  border-left: 4px solid #818cf8; /* A left-border accent */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.answer {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Subtle fade-in animation for the response */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.text-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: white;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.text-input:focus {
+  border-color: #38bdf8;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+}
