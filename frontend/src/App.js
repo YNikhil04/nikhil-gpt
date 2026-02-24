@@ -20,7 +20,6 @@ export default function App() {
         body: JSON.stringify({ prompt: userInput }),
       });
 
-      // If the server isn't running, fetch throws an error here
       const data = await response.json();
 
       if (data.success) {
@@ -71,7 +70,6 @@ export default function App() {
 
       <div className="response">
         <div className="container-response">
-          {/* We use aiResponse state here to show the answer */}
           <h1 className="answer">{aiResponse}</h1>
         </div>
       </div>

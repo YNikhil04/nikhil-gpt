@@ -17,7 +17,6 @@ app.post("/", async (req, res) => {
   if (!prompt) return res.status(400).json({ error: "Prompt is required." });
 
   try {
-    // Corrected SDK call for the newer '@google/genai' versions
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: [{ role: "user", parts: [{ text: prompt }] }],
