@@ -14,7 +14,7 @@ export default function App() {
     setAiResponse("Thinking...");
 
     try {
-      const response = await fetch("http://localhost:5000/", {
+      const response = await fetch("https://nikhil-gpt.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userInput }),
@@ -25,6 +25,7 @@ export default function App() {
 
       if (data.success) {
         setAiResponse(data.answer);
+        setUserInput("");
       } else {
         setAiResponse("Error: " + data.error);
       }
